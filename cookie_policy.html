@@ -1,4 +1,33 @@
 <!DOCTYPE html><html lang="nl"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/cookie_policy.html",
+      "url": "https://domain.com/cookie_policy.html",
+      "name": "domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "inLanguage": "nl"
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cookiebeleid - domain</title>
@@ -11,27 +40,36 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header navbar navbar-expand-md sticky-top bg-white border-bottom">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="/" aria-label="AutoInvest NL Homepage"> 
-     <svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <rect x="2" y="8" width="24" height="24" rx="4" fill="#2C2C2C"></rect> <path d="M14 14L18 20L14 26" stroke="#F5F5DC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <text x="32" y="26" font-family="serif" font-size="18" font-weight="700" fill="#2C2C2C">AutoInvest</text>
-     </svg> 
-    </a>
-    <button class="c-nav__toggle navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigatie"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav ms-auto align-items-md-center">
-      <li class="nav-item"><a class="nav-link" href="/" aria-current="page">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">Over Ons</a></li>
-      <li class="nav-item"><a class="nav-link" href="services.html">Diensten</a></li>
-      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      <li class="nav-item ms-md-3"><a class="c-button c-button--primary" href="#aanvraag-formulier">Direct Starten</a></li>
-     </ul>
+  <header class="dr-header" aria-label="Main header">
+  <div class="dr-header-inner">
+    <div class="dr-header-brand">
+      <div class="dr-header-logo" aria-label="AutoInvest logo">
+        <span class="dr-header-logo-mark"></span>
+        <span class="dr-header-logo-text">AutoInvest</span>
+      </div>
     </div>
-   </div>
-  </header>
+
+    <button class="dr-header-burger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="dr-header-nav">
+      <span class="dr-burger-bar"></span>
+      <span class="dr-burger-bar"></span>
+      <span class="dr-burger-bar"></span>
+    </button>
+
+    <nav class="dr-nav" id="dr-header-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main>
    <nav aria-label="breadcrumb" class="py-3">
     <div class="container">
@@ -233,68 +271,57 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-dark text-white py-4 py-md-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-lg-4 mb-4 mb-lg-0">
-      <h3 class="h5 mb-3">AutoInvest NL</h3>
-      <p class="mb-3">Premium auto-investeringen en professionele begeleiding in de Nederlandse automobielmarkt.</p>
-      <div class="c-footer__contact">
-       <p class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" aria-hidden="true">
-         <path d="M2 5L8 9L14 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <rect x="2" y="3" width="12" height="10" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
-        </svg>
-        <a href="mailto:info@domain.com" class="text-white text-decoration-none">info@domain.com</a>
-       </p>
-       <p class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" aria-hidden="true">
-         <path d="M3 5C3 3.89543 3.89543 3 5 3H6.5C6.77614 3 7 3.22386 7 3.5V6.5C7 6.77614 6.77614 7 6.5 7H4C3.44772 7 3 7.44772 3 8V8C3 8.55228 3.44772 9 4 9H12C12.5523 9 13 8.55228 13 8V8C13 7.44772 12.5523 7 12 7H9.5C9.22386 7 9 6.77614 9 6.5V3.5C9 3.22386 9.22386 3 9.5 3H11C12.1046 3 13 3.89543 13 5V11C13 12.1046 12.1046 13 11 13H5C3.89543 13 3 12.1046 3 11V5Z" stroke="currentColor" stroke-width="1.5"></path>
-        </svg>
-        <a href="tel:+31207891234" class="text-white text-decoration-none">+31 20 789 1234</a>
-       </p>
-       <p class="mb-0">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2" aria-hidden="true">
-         <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"></path> <path d="M8 4V8L10.5 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-        Herengracht 247, 1016 BJ Amsterdam, Nederland
-       </p>
+  <footer class="dr-footer" aria-label="Footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-main">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="AutoInvest logo">
+          <span class="dr-footer-logo-mark"></span>
+          <span class="dr-footer-logo-text">AutoInvest</span>
+        </div>
+        <p class="dr-footer-disclaimer">
+          The information provided on domain.com is for general informational purposes only and does not constitute financial, investment, legal, or other professional advice. domain does not guarantee the accuracy, completeness, or timeliness of any information and is not responsible for any losses or damages arising from reliance on the content provided. Users should conduct their own research and consult qualified professionals before making any decisions based on information from domain.com.
+        </p>
       </div>
-     </div>
-     <div class="col-md-6 col-lg-2">
-      <h4 class="h6 mb-3">Navigatie</h4>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/" class="text-white text-decoration-none">Home</a></li>
-       <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">Over Ons</a></li>
-       <li class="mb-2"><a href="services.html" class="text-white text-decoration-none">Diensten</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
-      </ul>
-     </div>
-     <div class="col-md-6 col-lg-3">
-      <h4 class="h6 mb-3">Juridisch</h4>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="privacy.html" class="text-white text-decoration-none">Privacyverklaring</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-white text-decoration-none">Algemene Voorwaarden</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-white text-decoration-none">Servicevoorwaarden</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-white text-decoration-none">Cookiebeleid</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3">
-      <h4 class="h6 mb-3">Werkuren</h4>
-      <ul class="list-unstyled small">
-       <li class="mb-2">Maandag - Vrijdag: 09:00 - 18:00</li>
-       <li class="mb-2">Zaterdag: 10:00 - 16:00</li>
-       <li class="mb-2">Zondag: Gesloten</li>
-      </ul>
-     </div>
+
+      <div class="dr-footer-nav-block" aria-label="Footer navigation">
+        <div class="dr-footer-nav-group" aria-label="Main navigation">
+          <h2 class="dr-footer-heading">Navigate</h2>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="dr-footer-legal-block" aria-label="Legal navigation">
+          <h2 class="dr-footer-heading">Legal</h2>
+          <ul class="dr-footer-legal-list">
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms And Conditions</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms Of Services</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <hr class="my-4 border-secondary">
-    <div class="row">
-     <div class="col-12 text-center">
-      <p class="mb-0 small">© 2025 AutoInvest NL. Alle rechten voorbehouden.</p>
-     </div>
+
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-copy">© <span class="dr-footer-copy-year">2024</span> domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
+  </div>
+</footer>
   <script src="script.js" defer=""></script>
  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>
